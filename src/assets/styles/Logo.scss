@@ -1,0 +1,17 @@
+$md1: 992.98px;
+$md2: 767.98px;
+$md3: 479.98px;
+$minwidth: 320px;
+
+.logo {
+  &__link {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    font-size: 30px;
+    display: block;
+    @media (max-width: $md2) {
+      font-size: 25px;
+    }
+  }
+}

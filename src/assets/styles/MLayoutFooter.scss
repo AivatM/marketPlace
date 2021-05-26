@@ -1,0 +1,20 @@
+.footer {
+  background-color: #000;
+  padding: 10px 0;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    &__link {
+      color: #fff;
+    }
+  }
+  &__wrap {
+  }
+  .socials {
+    a {
+      color: #fff;
+    }
+  }
+}
