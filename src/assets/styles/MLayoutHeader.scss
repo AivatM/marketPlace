@@ -113,12 +113,18 @@ $minwidth: 320px;
 }
 //Категория товаров
 .product-category {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  padding: 5px 10px;
-  border-radius: 3px;
-  cursor: pointer;
+  //position: relative;
+
+  &__btn{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+
   &__icon {
     width: 22px;
     height: 22px;

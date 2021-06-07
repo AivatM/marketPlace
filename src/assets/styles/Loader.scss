@@ -1,0 +1,74 @@
+.loader-container {
+  position: relative;
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50%);
+  float: left;
+  width: 100px;
+  height: 100px;
+
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.square-split {
+  .loader {
+    width: 100px;
+    height: 100px;
+
+    > div {
+      float: left;
+      width: 50%;
+      height: 50%;
+
+      &::after {
+        content: '';
+        display: block;
+        margin: 50% 0 0 50%;
+        width: 50%;
+        height: 50%;
+        background: #000;
+        animation: squareSplit 2.0s infinite ease-in-out alternate;
+      }
+    }
+
+    .square-2 {
+      transform: rotate(90deg);
+    }
+
+    .square-3 {
+      transform: rotate(270deg);
+      animation-direction: reverse;
+    }
+
+    .square-4 {
+      transform: rotate(180deg);
+      animation-direction: reverse;
+    }
+  }
+}
+
+@keyframes squareSplit {
+  20% {
+    transform: rotate(0deg);
+    margin: 50% 0 0 50%;
+  }
+  50% {
+    transform: rotate(90deg);
+    margin: 0px;
+  }
+  80% {
+    transform: rotate(180deg);
+    margin: 50% 0 0 50%;
+  }
+  100% {
+    transform: rotate(180deg);
+    margin: 50% 0 0 50%;
+  }
+}

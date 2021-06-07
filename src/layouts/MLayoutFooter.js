@@ -9,6 +9,7 @@ function MLayoutFooter() {
       <div className="container">
         <div className="footer__wrap">
           <Logo />
+
           <Socials />
         </div>
       </div>

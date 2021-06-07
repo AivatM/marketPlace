@@ -2,11 +2,17 @@ import { combineReducers, createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
 import { productsReducer } from "./reducers/productsReducer";
+import {categoriesReducer} from "./reducers/categoriesReducer";
+import {newsReducer} from "./reducers/newsReducer";
+import {appReducer} from "./reducers/appReducer";
 
 const rootReducer = combineReducers({
+  app: appReducer,
   products: productsReducer,
+  categories: categoriesReducer,
+  news: newsReducer,
 });
 
-const middlewares = [applyMiddleware(thunk, logger)];
 
-export const store = createStore(rootReducer, compose(...middlewares));
+
+export const store = createStore(rootReducer, compose(applyMiddleware(thunk, logger)));
